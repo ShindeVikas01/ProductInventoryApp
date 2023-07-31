@@ -2,10 +2,13 @@ package com.infinity.productinventoryapp.service.impl;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.infinity.productinventoryapp.entity.ProductEntity;
 import com.infinity.productinventoryapp.model.ProductModel;
 import com.infinity.productinventoryapp.service.IProductService;
 
+@Service
 public class ProductService implements IProductService {
 
 	@Override
