@@ -25,7 +25,7 @@ public class ProductService implements IProductService {
 	@Override
 	public List<ProductEntity> getAllProduct() {
 		// TODO Auto-generated method stub
-		return null;
+		return productRepo.findAll();
 	}
 
 	@Override

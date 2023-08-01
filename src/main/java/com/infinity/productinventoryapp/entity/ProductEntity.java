@@ -69,6 +69,10 @@ public class ProductEntity {
 		this.p_Status = p_Status;
 	}
 
+	public ProductEntity() {
+		super();
+	}
+	
 	public ProductEntity(ProductModel productModel) {
 		
 		this.p_Name = productModel.getP_Name();
