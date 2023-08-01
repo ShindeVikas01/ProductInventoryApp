@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,9 +29,14 @@ public class ProductController {
 		return iProductService.addProduct(productModel);
 	}
 	
-	@GetMapping("/getallproduct")
+	@GetMapping("/getallproducts")
 	public ResponseEntity<List<ProductEntity>> getallproduct(){
 		return new ResponseEntity<List<ProductEntity>>(iProductService.getAllProduct(),HttpStatus.ACCEPTED);
+	}
+	
+	@GetMapping("/getproductbyid/{p_Id}")
+	public ProductEntity getproductbyid(@PathVariable("p_Id")Integer p_Id) {
+		return iProductService.getProductById(p_Id);
 	}
 
 }

@@ -29,11 +29,11 @@ public class ProductService implements IProductService {
 	}
 
 	@Override
-	public ProductEntity getProductById(Integer id) {
+	public ProductEntity getProductById(Integer p_Id) {
 		// TODO Auto-generated method stub
-		return null;
+		return productRepo.getProductById(p_Id);
 	}
-
+	
 	@Override
 	public String deleteProduct(Integer id) {
 		// TODO Auto-generated method stub

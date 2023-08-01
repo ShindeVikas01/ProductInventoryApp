@@ -10,7 +10,7 @@ public interface IProductService {
 
 	public ProductEntity addProduct(ProductModel productModel); 
 	public List<ProductEntity> getAllProduct();
-	public ProductEntity getProductById(Integer id);
+	public ProductEntity getProductById(Integer p_Id);
 	public String deleteProduct(Integer id);
 	public ProductEntity updateProduct(Integer id);
 }

@@ -1,5 +1,6 @@
 package com.infinity.productinventoryapp.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,19 +15,20 @@ public class ProductEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long p_Id;
+	@Column(name="p_Id")
+	private Integer id;
 	private String p_Name;
 	private String p_Desc;
 	private Integer p_Quantity;
 	private Integer p_Price;
 	private String p_Status;
 	
-	public Long getP_Id() {
-		return p_Id;
+	public Integer getId() {
+		return id;
 	}
 
-	public void setP_Id(Long p_Id) {
-		this.p_Id = p_Id;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getP_Name() {
