@@ -2,19 +2,24 @@ package com.infinity.productinventoryapp.service.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.infinity.productinventoryapp.entity.ProductEntity;
 import com.infinity.productinventoryapp.model.ProductModel;
+import com.infinity.productinventoryapp.repo.ProductRepo;
 import com.infinity.productinventoryapp.service.IProductService;
 
 @Service
 public class ProductService implements IProductService {
 
+	@Autowired
+	ProductRepo productRepo;
+	
 	@Override
 	public ProductEntity addProduct(ProductModel productModel) {
-		// TODO Auto-generated method stub
-		return null;
+		ProductEntity productEntity=new ProductEntity(productModel);
+		return productRepo.save(productEntity);
 	}
 
 	@Override

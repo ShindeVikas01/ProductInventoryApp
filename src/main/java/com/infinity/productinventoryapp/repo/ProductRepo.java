@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.infinity.productinventoryapp.entity.ProductEntity;
 
 @Repository
-public interface ProductRepo extends JpaRepository<ProductEntity, Integer>{
+public interface ProductRepo extends JpaRepository<ProductEntity, Long>{
 
 }

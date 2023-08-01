@@ -2,41 +2,53 @@ package com.infinity.productinventoryapp.model;
 
 public class ProductModel {
 	
-	private String name;
-	private String desc;
-	private Integer quantity;
-	private Integer prize;
-	private String status;
 	
-	public String getName() {
-		return name;
+	private String p_Name;
+	private String p_Desc;
+	private Integer p_Quantity;
+	private Integer p_Price;
+	private String p_Status;
+
+	public String getP_Name() {
+		return p_Name;
 	}
-	public void setName(String name) {
-		this.name = name;
+
+	public void setP_Name(String p_Name) {
+		this.p_Name = p_Name;
 	}
-	public String getDesc() {
-		return desc;
+
+	public String getP_Desc() {
+		return p_Desc;
 	}
-	public void setDesc(String desc) {
-		this.desc = desc;
+
+	public void setP_Desc(String p_Desc) {
+		this.p_Desc = p_Desc;
 	}
-	public Integer getQuantity() {
-		return quantity;
+
+	public Integer getP_Quantity() {
+		return p_Quantity;
 	}
-	public void setQuantity(Integer quantity) {
-		this.quantity = quantity;
+
+	public void setP_Quantity(Integer p_Quantity) {
+		this.p_Quantity = p_Quantity;
 	}
-	public Integer getPrize() {
-		return prize;
+
+	public Integer getP_Price() {
+		return p_Price;
 	}
-	public void setPrize(Integer prize) {
-		this.prize = prize;
+
+	public void setP_Price(Integer p_Price) {
+		this.p_Price = p_Price;
 	}
-	public String getStatus() {
-		return status;
+
+	public String getP_Status() {
+		return p_Status;
 	}
-	public void setStatus(String status) {
-		this.status = status;
+
+	public void setP_Status(String p_Status) {
+		this.p_Status = p_Status;
 	}
+	
+	
 
 }
