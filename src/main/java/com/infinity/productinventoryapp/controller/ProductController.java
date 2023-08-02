@@ -44,6 +44,10 @@ public class ProductController {
 	public String updateProduct(@PathVariable("id")Integer id,@RequestBody ProductModel productModel) {
 		return iProductService.updateProduct(id,productModel);
 	}
-
+	
+	@GetMapping("/deleteproduct/{id}")
+	public String deleteproduct(@PathVariable("id")Integer id) {
+		return iProductService.deleteProduct(id);
+	}
 	
 }

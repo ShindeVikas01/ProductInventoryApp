@@ -45,18 +45,25 @@ public class ProductService implements IProductService {
 			productEntity.setP_Quantity(productModel.getP_Quantity());
 			productEntity.setP_Status(productModel.getP_Status());
 			productRepo.save(productEntity);
-			return "Product Updated";
+			return "Product is Updated";
 		}else
 		{
-			return "Product not avialable";
+			return "Product is not avialable";
 		}
 		
 	}
 	
 	@Override
 	public String deleteProduct(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		ProductEntity productEntity=getProductById(id);
+		if(productEntity!=null)
+		{
+			productRepo.delete(productEntity);
+			return "Product is Deleted";
+		}else
+		{
+			return "Product is not avialable";
+		} 
 	}
 
 }
