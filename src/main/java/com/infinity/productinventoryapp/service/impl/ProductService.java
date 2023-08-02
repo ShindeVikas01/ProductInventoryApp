@@ -33,15 +33,28 @@ public class ProductService implements IProductService {
 		// TODO Auto-generated method stub
 		return productRepo.getProductById(p_Id);
 	}
+
+	@Override
+	public String updateProduct(Integer id,ProductModel productModel) {
+		ProductEntity productEntity=getProductById(id);
+		if(productEntity!=null)
+		{
+			productEntity.setP_Name(productModel.getP_Name());
+			productEntity.setP_Desc(productModel.getP_Desc());
+			productEntity.setP_Price(productModel.getP_Price());
+			productEntity.setP_Quantity(productModel.getP_Quantity());
+			productEntity.setP_Status(productModel.getP_Status());
+			productRepo.save(productEntity);
+			return "Product Updated";
+		}else
+		{
+			return "Product not avialable";
+		}
+		
+	}
 	
 	@Override
 	public String deleteProduct(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ProductEntity updateProduct(Integer id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

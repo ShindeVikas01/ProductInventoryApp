@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.infinity.productinventoryapp.entity.ProductEntity;
@@ -38,5 +39,11 @@ public class ProductController {
 	public ProductEntity getproductbyid(@PathVariable("p_Id")Integer p_Id) {
 		return iProductService.getProductById(p_Id);
 	}
+	
+	@GetMapping("/updateproduct/{id}")
+	public String updateProduct(@PathVariable("id")Integer id,@RequestBody ProductModel productModel) {
+		return iProductService.updateProduct(id,productModel);
+	}
 
+	
 }
